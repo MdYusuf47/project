@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="filesubmit.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Submit your works here</h2>
+        </div>
+
+        <form class="form" name="myform" onsubmit="return validation()">
+            <div class="form-control">
+                <label>Submit all your works in a single file</label>
+                <input type="file" name="file_submit">
+
+            </div>
+            <input type="submit" value="submit" class="btn" onclick="redirect()">
+        </form>
+    </div>
+
+
+
+    <script>
+
+
+        var file = document.forms['myform']["file_submit"];
+        function validation() {
+            if (file.value != "") {
+
+            } else {
+                alert("no file selected")
+                return false;
+            }
+        }
+        function redirect() {
+
+            window.location.href = "index.html"
+
+        }
+
+    </script>
+</body>
+
+</html>
